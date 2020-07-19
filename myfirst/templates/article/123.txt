@@ -1,0 +1,33 @@
+$("form").submit(function(e){
+
+        var name = $("input[name='name']").val();
+
+        var email = $("input[name='email']").val();
+
+
+     
+
+        $(".data-table tbody").append("
+        <tr data-name='"+name+"' data-email='"+email+"'>
+        <td>"+name+"</td>
+        <td>"+email+"</td>
+        <td>
+        	<button class='btn btn-info btn-xs btn-edit'>Edit</button>
+        	<button class='btn btn-danger btn-xs btn-delete'>Delete</button>
+        </td>
+        </tr>");
+
+    
+
+        $("input[name='name']").val('');
+
+        $("input[name='email']").val('');
+
+        $.ajax({
+			url: url,
+		  	type: "POST",
+			data: { 'name': name, 
+				    'email': email};
+		});
+
+    });

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}lab1{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<div class="header">
+        <a class="logo"></a>
+        <div class="header-right">
+            <a href="http://0.0.0.0:8000/article/1/">Индивидуальное задание</a>
+            <a href="http://0.0.0.0:8000/article/">Таблица</a>
+            <a class = "active">О себе</a>
+        </div>
+    </div>
+<hr>
+
+<div class="container">
+
+<div class="form-group">
+
+      <h1>Шатров Савелий</h1>
+      <label>Индивидуальное задание:</label>
+      <div>Сервер получает строку с разделительным знаком "," и возвращает значения сгруппированные по типу</div>
+      
+
+    </div>
+
+<style>
+        * {box-sizing: border-box;}
+
+        body { 
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+          overflow: hidden;
+          background-color: #f1f1f1;
+          padding: 20px 10px;
+        }
+
+        .header a {
+          float: left;
+          color: black;
+          text-align: center;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px; 
+          line-height: 25px;
+          border-radius: 4px;
+        }
+
+        .header a.logo {
+          font-size: 25px;
+          font-weight: bold;
+        }
+
+        .header a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        .header a.active {
+          background-color: dodgerblue;
+          color: white;
+        }
+
+        .header-right {
+          float: right;
+        }
+
+        @media screen and (max-width: 500px) {
+          .header a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          
+          .header-right {
+            float: none;
+          }
+        }
+</style>
+</div>
+
+{% endblock %}
